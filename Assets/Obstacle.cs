@@ -30,12 +30,13 @@ public class Obstacle : MonoBehaviour
                 lifeText.text = obstacleLife.ToString();
             }
             else
+            {
                 //ToDo: animation, explotion, sound, sum extra score!
                 //dissapear
                 Destroy(gameObject);
 
             }
-            
+
 
         }
     }
