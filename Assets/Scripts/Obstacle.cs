@@ -66,7 +66,10 @@ public class Obstacle : MonoBehaviour
         var x = -1;
         for (int ballIndex = 0; ballIndex < ballsToSpawn; ballIndex++)
         {
-            GameObject ball = Instantiate(ballPrefab, col.transform.position, col.transform.rotation);
+            GameObject ball = ObjectPoolManager.Instance.GetSpawnedBall();
+            ball.transform.position = col.transform.position;
+            ball.transform.rotation = col.transform.rotation;
+            ball.SetActive(true);
             ball.GetComponent<Rigidbody2D>().velocity = new Vector2(x, 1) * spawnedBallSpeed;
             x++;
         }
