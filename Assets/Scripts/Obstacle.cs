@@ -20,20 +20,9 @@ public class Obstacle : MonoBehaviour
     [SerializeField]
     private float spawnedBallSpeed = 7f;
 
-    [SerializeField]
-    private GameObject ballPrefab;
-
-    private AudioSource myAudioSource;
-
-    private SpriteRenderer mySpriteRenderer;
-    private Collider2D myCollider;
-
     private void Awake()
     {
         lifeText.text = obstacleLife.ToString();
-        myAudioSource = GetComponent<AudioSource>();
-        mySpriteRenderer = GetComponent<SpriteRenderer>();
-        myCollider = GetComponent<Collider2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D col)
