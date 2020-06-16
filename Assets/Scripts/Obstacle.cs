@@ -18,7 +18,7 @@ public class Obstacle : MonoBehaviour
     private int ballsToSpawn = 3;
 
     [SerializeField]
-    private float spawnedBallSpeed = 5f;
+    private float spawnedBallSpeed = 10f;
 
     [SerializeField]
     private GameObject ballPrefab;
@@ -34,7 +34,8 @@ public class Obstacle : MonoBehaviour
         {
             if (obstacleLife > 0)
             {
-                SpawnBalls();
+                
+                SpawnBalls(col);
             }
         }
 
@@ -59,9 +60,15 @@ public class Obstacle : MonoBehaviour
         }
     }
 
-    private void SpawnBalls()
+    private void SpawnBalls(Collision2D col)
     {
-        GameObject ball = Instantiate(ballPrefab, transform.position, transform.rotation);
-        ball.GetComponent<Rigidbody2D>().velocity = (transform.right) * spawnedBallSpeed;
+        //ToDo: make it changeable
+        var x = -1;
+        for (int ballIndex = 0; ballIndex < ballsToSpawn; ballIndex++)
+        {
+            GameObject ball = Instantiate(ballPrefab, col.transform.position, col.transform.rotation);
+            ball.GetComponent<Rigidbody2D>().velocity = new Vector2(x, 1) * spawnedBallSpeed;
+            x++;
+        }
     }
 }
