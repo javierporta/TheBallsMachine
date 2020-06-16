@@ -18,7 +18,7 @@ public class Obstacle : MonoBehaviour
     private int ballsToSpawn = 3;
 
     [SerializeField]
-    private float spawnedBallSpeed = 10f;
+    private float spawnedBallSpeed = 7f;
 
     [SerializeField]
     private GameObject ballPrefab;

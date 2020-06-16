@@ -292,5 +292,6 @@ MonoBehaviour:
   obstacleLife: 5
   lifeText: {fileID: 751513741642403118}
   ballsToSpawn: 3
+  spawnedBallSpeed: 7
   ballPrefab: {fileID: 8222723622086273137, guid: ff55174a2ff538e4696fd78625017172,
     type: 3}

@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class SpawnedBall : MonoBehaviour
 {
-    
-    [SerializeField]
-    private float timeToLive = 3f;
 
     private void OnEnable()
     {

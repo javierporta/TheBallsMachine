@@ -43,3 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: SpawnedBalls
+    uniqueID: 2394580269
+    locked: 0
+  - name: MainBall
+    uniqueID: 3338919777
+    locked: 0

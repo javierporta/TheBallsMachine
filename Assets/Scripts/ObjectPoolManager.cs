@@ -10,7 +10,7 @@ public class ObjectPoolManager : MonoBehaviour
     private GameObject spawnedBall;
 
     [SerializeField]
-    private int initialAmountOfSpawnedBalls = 21; //ToDo: can we calclate this number automatically? Counting the number of prefabs and multiplying by balls spawned
+    private int initialAmountOfSpawnedBalls = 20;
 
     [SerializeField]
     private bool poolCanGrow = true;
