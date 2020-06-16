@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 6842439923134409973}
   - component: {fileID: 6842439923134409978}
   - component: {fileID: 6842439923134409979}
+  - component: {fileID: 1176225947}
   m_Layer: 0
   m_Name: rectangle
   m_TagString: Untagged
@@ -218,6 +219,23 @@ PolygonCollider2D:
       - {x: 1.4468657, y: 0.61343294}
       - {x: 1.0699998, y: 0.990299}
       - {x: -1.0675869, y: 0.99271154}
+--- !u!114 &1176225947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6842439923134409976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7969f8150c51fd84f98b49f04feec276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleLife: 1
+  lifeText: {fileID: 215365823903845703}
+  ballsToSpawn: 3
+  ballPrefab: {fileID: 8222723622086273137, guid: ff55174a2ff538e4696fd78625017172,
+    type: 3}
 --- !u!1 &7992508026035483347
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,4 +313,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 

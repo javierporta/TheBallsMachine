@@ -179,6 +179,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacleLife: 5
   lifeText: {fileID: 7090122744922261825}
+  ballsToSpawn: 3
+  ballPrefab: {fileID: 8222723622086273137, guid: ff55174a2ff538e4696fd78625017172,
+    type: 3}
 --- !u!1 &7675207091144562052
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,4 +358,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: numberHere
+  m_Text: 
