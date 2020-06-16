@@ -23,9 +23,17 @@ public class Obstacle : MonoBehaviour
     [SerializeField]
     private GameObject ballPrefab;
 
+    private AudioSource myAudioSource;
+
+    private SpriteRenderer mySpriteRenderer;
+    private Collider2D myCollider;
+
     private void Awake()
     {
         lifeText.text = obstacleLife.ToString();
+        myAudioSource = GetComponent<AudioSource>();
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
+        myCollider = GetComponent<Collider2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -43,17 +51,18 @@ public class Obstacle : MonoBehaviour
         {
             if (obstacleLife > 1)
             {
-                //TODO: Play sound
+                BallsAudioManager.Instance.PlayHitSound();
 
                 obstacleLife--;
                 lifeText.text = obstacleLife.ToString();
             }
             else
             {
-                //ToDo: animation, explotion, sound, sum extra score!
-                //dissapear
-                Destroy(gameObject);
+                //ToDo: animation, explotion, sum extra score!
+                BallsAudioManager.Instance.PlayExplosionSound();
 
+                //Object is gone
+                Destroy(gameObject);
             }
 
 
