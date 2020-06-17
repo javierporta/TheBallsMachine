@@ -12,6 +12,10 @@ public class UIManager : MonoBehaviour
 
     [SerializeField]
     private Text currentLevelText;
+
+    [SerializeField]
+    private GameObject levelDonePanel;
+
     private void Awake()
     {
         if (Instance == null)
@@ -34,4 +38,11 @@ public class UIManager : MonoBehaviour
     {
         currentLevelText.text = $"Level {currentLevel}";
     }
+
+    public void ShowLevelDonePanel(bool hasToShowLevel)
+    {
+        levelDonePanel.SetActive(hasToShowLevel);
+    }
+
+
 }

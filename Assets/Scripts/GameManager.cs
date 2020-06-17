@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
         if (MainBall.Instance.HasBallFellDown && ObjectPoolManager.Instance.AreAllSpawnedBallsInactive())
         {
             print("Level finished");
-            //ToDo: show menu with results > next level | restart
+            UIManager.Instance.ShowLevelDonePanel(true);
         }
     }
 }
