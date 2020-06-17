@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnedBall : MonoBehaviour
 {
+    
 
     private void OnEnable()
     {
@@ -14,5 +15,13 @@ public class SpawnedBall : MonoBehaviour
     private void Deactivate()
     {
         gameObject.SetActive(false);
+    }
+
+
+
+    private void OnBecameInvisible()
+    {
+        Deactivate();
+        GameManager.Instance.CheckIfLevelHasFinished();
     }
 }

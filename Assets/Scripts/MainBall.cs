@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class MainBall : MonoBehaviour
 {
+    public static MainBall Instance { get; private set; } = null;
+
     private Rigidbody2D ballRigidbody;
     [SerializeField]
     private float speed = 3.5f;
 
     private bool wasBallThrown = false;
 
+    public bool HasBallFellDown = false;
+
     private void Awake()
     {
         ballRigidbody = GetComponent<Rigidbody2D>();
+
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Update()
@@ -38,5 +51,12 @@ public class MainBall : MonoBehaviour
     {
         ballRigidbody.gravityScale = 1;
         wasBallThrown = true;
+    }
+
+    private void OnBecameInvisible()
+    {
+        HasBallFellDown = true;
+        GameManager.Instance.CheckIfLevelHasFinished();
+
     }
 }

@@ -51,13 +51,26 @@ public class ObjectPoolManager : MonoBehaviour
         if (poolCanGrow)
         {
             GameObject newSpawnedBall = Instantiate(spawnedBall, transform);
-            initialAmountOfSpawnedBalls++;
+            //initialAmountOfSpawnedBalls++;
             return newSpawnedBall;
         }
         else
         {
             return null;
         }
+    }
+
+    public bool AreAllSpawnedBallsInactive()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            GameObject child = transform.GetChild(i).gameObject;
+            if (child.activeSelf)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
 
