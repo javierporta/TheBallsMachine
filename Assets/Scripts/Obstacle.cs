@@ -20,6 +20,9 @@ public class Obstacle : MonoBehaviour
     [SerializeField]
     private float spawnedBallSpeed = 7f;
 
+    private int hitScore = 10;
+    private int destroyScore = 50;
+
     private void Awake()
     {
         lifeText.text = obstacleLife.ToString();
@@ -44,11 +47,15 @@ public class Obstacle : MonoBehaviour
 
                 obstacleLife--;
                 lifeText.text = obstacleLife.ToString();
+                GameManager.Instance.AddScore(hitScore);
             }
             else
             {
-                //ToDo: animation, explotion, sum extra score!
+                //ToDo: animation, explotion
                 BallsAudioManager.Instance.PlayExplosionSound();
+                
+                //sum extra score!
+                GameManager.Instance.AddScore(destroyScore);
 
                 //Object is gone
                 Destroy(gameObject);

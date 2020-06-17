@@ -32,6 +32,6 @@ public class UIManager : MonoBehaviour
 
     public void UpdateCurrentLevel(int currentLevel)
     {
-        currentLevelText.text = currentLevel.ToString();
+        currentLevelText.text = $"Level {currentLevel}";
     }
 }
