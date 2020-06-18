@@ -52,6 +52,7 @@ public class MainBall : MonoBehaviour
     {
         ballRigidbody.gravityScale = 1;
         wasBallThrown = true;
+        UIManager.Instance.ShowVirtualControl(false);
     }
 
     private void OnBecameInvisible()

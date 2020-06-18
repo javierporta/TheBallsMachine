@@ -60,9 +60,10 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
         UIManager.Instance.ShowLevelDonePanel(false);
-        
+        UIManager.Instance.ShowVirtualControl(true);
+
     }
 
     public void CheckIfLevelHasFinished()

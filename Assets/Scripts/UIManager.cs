@@ -48,4 +48,9 @@ public class UIManager : MonoBehaviour
         levelDonePanel.SetActive(hasToShowLevel);
     }
 
+    public void ShowVirtualControl(bool hasToShowVirtualControl)
+    {
+        virtualControl.SetActive(hasToShowVirtualControl);
+    }
+
 }
