@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class MainBall : MonoBehaviour
 {
@@ -32,9 +33,9 @@ public class MainBall : MonoBehaviour
     {
         if (!wasBallThrown)
         {
-            float horizontalInput = Input.GetAxisRaw("Horizontal");
+            float horizontalInput = CrossPlatformInputManager.GetAxisRaw("Horizontal");
 
-            if (Input.GetButtonDown("Fire1"))
+            if (CrossPlatformInputManager.GetButtonDown("Fire1"))
             {
                 ThrowBall();
             }
