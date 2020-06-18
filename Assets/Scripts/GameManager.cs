@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -55,6 +56,13 @@ public class GameManager : MonoBehaviour
     {
         score = 0;
         UpdateGameScoreText();
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        UIManager.Instance.ShowLevelDonePanel(false);
+        
     }
 
     public void CheckIfLevelHasFinished()

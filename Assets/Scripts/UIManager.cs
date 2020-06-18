@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class UIManager : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class UIManager : MonoBehaviour
 
     [SerializeField]
     private GameObject levelDonePanel;
+
+    [SerializeField]
+    private GameObject virtualControl;
 
     private void Awake()
     {
@@ -43,6 +47,5 @@ public class UIManager : MonoBehaviour
     {
         levelDonePanel.SetActive(hasToShowLevel);
     }
-
 
 }

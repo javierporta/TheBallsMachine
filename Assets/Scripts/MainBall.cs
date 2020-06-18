@@ -58,6 +58,5 @@ public class MainBall : MonoBehaviour
     {
         HasBallFellDown = true;
         GameManager.Instance.CheckIfLevelHasFinished();
-
     }
 }

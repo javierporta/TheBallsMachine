@@ -1742,7 +1742,6 @@ RectTransform:
   - {fileID: 2039405021}
   - {fileID: 1074460366}
   - {fileID: 472973431}
-  - {fileID: 1118586393}
   m_Father: {fileID: 1918435776}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4233,6 +4232,7 @@ MonoBehaviour:
   scoreText: {fileID: 2039405022}
   currentLevelText: {fileID: 1074460367}
   levelDonePanel: {fileID: 1227479929}
+  virtualControl: {fileID: 0}
 --- !u!4 &1576990019
 Transform:
   m_ObjectHideFlags: 0
@@ -5075,6 +5075,7 @@ RectTransform:
   m_Children:
   - {fileID: 770099281}
   - {fileID: 1227479930}
+  - {fileID: 1118586393}
   m_Father: {fileID: 1576990019}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5307,7 +5308,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 770099281}
+    m_TransformParent: {fileID: 1918435776}
     m_Modifications:
     - target: {fileID: 100000, guid: 9529ecc3d479da5499993355e6c2cb4f, type: 3}
       propertyPath: m_Name
@@ -5343,7 +5344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 9529ecc3d479da5499993355e6c2cb4f, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 9529ecc3d479da5499993355e6c2cb4f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5363,7 +5364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 9529ecc3d479da5499993355e6c2cb4f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1450
+      value: 1600
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 9529ecc3d479da5499993355e6c2cb4f, type: 3}
       propertyPath: m_SizeDelta.x
