@@ -62,8 +62,6 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
         UIManager.Instance.ShowLevelDonePanel(false);
-        UIManager.Instance.ShowVirtualControl(true);
-
     }
 
     public void CheckIfLevelHasFinished()

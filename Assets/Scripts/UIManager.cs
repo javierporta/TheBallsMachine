@@ -17,9 +17,6 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private GameObject levelDonePanel;
 
-    [SerializeField]
-    private GameObject virtualControl;
-
     private void Awake()
     {
         if (Instance == null)
@@ -50,7 +47,7 @@ public class UIManager : MonoBehaviour
 
     public void ShowVirtualControl(bool hasToShowVirtualControl)
     {
-        virtualControl.SetActive(hasToShowVirtualControl);
+        VirutalControls.Instance.ShowVirtualControl(hasToShowVirtualControl);
     }
 
 }
