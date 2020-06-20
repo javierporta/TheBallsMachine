@@ -7,12 +7,13 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; } = null;
     private int score = 0;
+    private int currentLevelScore = 0;
 
     private int level = 1;
 
     public bool IsPaused { get; private set; } = false;
 
-    private float oldTimeScale;
+    private float currentLevelTotalScore;
 
     private void Awake()
     {
@@ -38,6 +39,11 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.UpdateScore(score);
     }
 
+    private void UpdateCurrentLevelScoreText()
+    {
+        UIManager.Instance.UpdateCurrentLevelScore(currentLevelScore);
+    }
+
     private void UpdateGameCurrentLevel()
     {
         UIManager.Instance.UpdateCurrentLevel(level);
@@ -47,8 +53,13 @@ public class GameManager : MonoBehaviour
     {
         if (scoreToAdd > 0)
         {
+            //Total score
             score += scoreToAdd;
             UpdateGameScoreText();
+
+            //Current level score
+            currentLevelScore += scoreToAdd;
+            UpdateCurrentLevelScoreText();
         }
     }
 
@@ -58,10 +69,25 @@ public class GameManager : MonoBehaviour
         UpdateGameScoreText();
     }
 
+    public void ResetCurrentLevelScore()
+    {
+        currentLevelScore = 0;
+        UpdateCurrentLevelScoreText();
+    }
+
     public void RestartLevel()
     {
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
         UIManager.Instance.ShowLevelDonePanel(false);
+        CancelLastGameScore();
+        ResetCurrentLevelScore();
+    }
+
+    private void CancelLastGameScore()
+    {
+        //get back to initial score
+        score = score - currentLevelScore;
+        UpdateGameScoreText();
     }
 
     public void NextLevel()
@@ -70,6 +96,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadSceneAsync($"Level{level}Scene");
         UIManager.Instance.ShowLevelDonePanel(false);
         UIManager.Instance.UpdateCurrentLevel(level);
+        ResetCurrentLevelScore();
     }
 
     public void CheckIfLevelHasFinished()

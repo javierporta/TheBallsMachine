@@ -12,6 +12,9 @@ public class UIManager : MonoBehaviour
     private Text scoreText;
 
     [SerializeField]
+    private Text currentLevelScoreText;
+
+    [SerializeField]
     private Text currentLevelText;
 
     [SerializeField]
@@ -33,6 +36,11 @@ public class UIManager : MonoBehaviour
     public void UpdateScore(int score)
     {
         scoreText.text = score.ToString();
+    }
+
+    public void UpdateCurrentLevelScore(int score)
+    {
+        currentLevelScoreText.text = score.ToString();
     }
 
     public void UpdateCurrentLevel(int currentLevel)
