@@ -57,15 +57,15 @@ public class Obstacle : MonoBehaviour
             }
             else
             {
-                //ToDo: animation, explotion
-                myAnimator.SetTrigger("disintegration");
                 BallsAudioManager.Instance.PlayExplosionSound();
 
                 //sum extra score!
                 var destroyScore = hitScore * initialObstacleLife;
                 GameManager.Instance.AddScore(destroyScore);
 
-              
+                myAnimator.SetTrigger("disintegration");
+
+
             }
 
 
