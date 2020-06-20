@@ -24,11 +24,14 @@ public class Obstacle : MonoBehaviour
 
     private int initialObstacleLife;
 
+    private Animator myAnimator;
+
 
     private void Awake()
     {
         lifeText.text = obstacleLife.ToString();
         initialObstacleLife = obstacleLife;
+        myAnimator = GetComponent<Animator>();
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -55,18 +58,24 @@ public class Obstacle : MonoBehaviour
             else
             {
                 //ToDo: animation, explotion
+                myAnimator.SetTrigger("disintegration");
                 BallsAudioManager.Instance.PlayExplosionSound();
 
                 //sum extra score!
                 var destroyScore = hitScore * initialObstacleLife;
                 GameManager.Instance.AddScore(destroyScore);
 
-                //Object is gone
-                Destroy(gameObject);
+              
             }
 
 
         }
+    }
+
+    private void DestroyObstacle() //called by animation event
+    {
+        //Object is gone
+        Destroy(gameObject);
     }
 
     private void SpawnBalls(Collision2D col)
