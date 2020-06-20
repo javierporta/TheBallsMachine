@@ -20,6 +20,15 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private GameObject levelDonePanel;
 
+    [SerializeField]
+    private GameObject gameCompletedPanel;
+
+    [SerializeField]
+    private GameObject hud;
+
+    [SerializeField]
+    private Text finalScoreText;
+
     private void Awake()
     {
         if (Instance == null)
@@ -43,6 +52,11 @@ public class UIManager : MonoBehaviour
         currentLevelScoreText.text = score.ToString();
     }
 
+    public void UpdateFinalScore(int score)
+    {
+        finalScoreText.text = score.ToString();
+    }
+
     public void UpdateCurrentLevel(int currentLevel)
     {
         currentLevelText.text = $"Level {currentLevel}";
@@ -52,6 +66,17 @@ public class UIManager : MonoBehaviour
     {
         levelDonePanel.SetActive(hasToShowLevel);
     }
+
+    public void ShowGameCompletedPanel(bool hasToShowPanel)
+    {
+        gameCompletedPanel.SetActive(hasToShowPanel);
+    }
+
+    public void ShowHud(bool hasToShowHud)
+    {
+        hud.SetActive(hasToShowHud);
+    }
+
 
     public void ShowVirtualControl(bool hasToShowVirtualControl)
     {

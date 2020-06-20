@@ -11,10 +11,6 @@ public class GameManager : MonoBehaviour
 
     private int level = 1;
 
-    public bool IsPaused { get; private set; } = false;
-
-    private float currentLevelTotalScore;
-
     private void Awake()
     {
         if (Instance == null)
@@ -104,7 +100,17 @@ public class GameManager : MonoBehaviour
         if (MainBall.Instance.HasBallFellDown && ObjectPoolManager.Instance.AreAllSpawnedBallsInactive())
         {
             print("Level finished");
-            UIManager.Instance.ShowLevelDonePanel(true);
+
+            if (level == 3)
+            {
+                UIManager.Instance.ShowGameCompletedPanel(true);
+                UIManager.Instance.UpdateFinalScore(score);
+            }
+            else
+            {
+                UIManager.Instance.ShowLevelDonePanel(true);
+            }
+            
         }
     }
 
@@ -113,7 +119,16 @@ public class GameManager : MonoBehaviour
         level = 1;
         SceneManager.LoadSceneAsync($"Level{level}Scene");
         UIManager.Instance.ShowLevelDonePanel(false);
+        UIManager.Instance.UpdateCurrentLevel(level);
+        UIManager.Instance.ShowHud(true);
         ResetScore();
         ResetCurrentLevelScore();
+    }
+
+    public void GoToMainMenu()
+    {
+        UIManager.Instance.ShowGameCompletedPanel(false);
+        UIManager.Instance.ShowHud(false);
+        SceneManager.LoadSceneAsync("MenuScene");
     }
 }
