@@ -448,6 +448,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 840193513712371431, guid: e6eeb3ae2bf159b4fb3866e7b17f6f96,
+        type: 3}
+      propertyPath: obstacleLife
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4327891213067946705, guid: e6eeb3ae2bf159b4fb3866e7b17f6f96,
         type: 3}
       propertyPath: m_Name

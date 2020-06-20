@@ -21,11 +21,14 @@ public class Obstacle : MonoBehaviour
     private float spawnedBallSpeed = 7f;
 
     private int hitScore = 10;
-    private int destroyScore = 50;
+
+    private int initialObstacleLife;
+
 
     private void Awake()
     {
         lifeText.text = obstacleLife.ToString();
+        initialObstacleLife = obstacleLife;
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -53,8 +56,9 @@ public class Obstacle : MonoBehaviour
             {
                 //ToDo: animation, explotion
                 BallsAudioManager.Instance.PlayExplosionSound();
-                
+
                 //sum extra score!
+                var destroyScore = hitScore * initialObstacleLife;
                 GameManager.Instance.AddScore(destroyScore);
 
                 //Object is gone
