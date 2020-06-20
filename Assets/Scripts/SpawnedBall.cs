@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class SpawnedBall : MonoBehaviour
 {
-    
+    private bool hasToBeDeactivated=false;
 
-    private void OnEnable()
-    {
-        //ToDo: Spawned time live not necessary. It should die when go outside camera
-        // Invoke(nameof(Deactivate), timeToLive);
-    }
+    private float secondsToWaitUntilBallIsOut = 2f;
 
     private void Deactivate()
     {
@@ -21,7 +17,25 @@ public class SpawnedBall : MonoBehaviour
 
     private void OnBecameInvisible()
     {
-        Deactivate();
-        GameManager.Instance.CheckIfLevelHasFinished();
+        hasToBeDeactivated = true;
+
+        StartCoroutine(ExecuteCleaningAfterTime(secondsToWaitUntilBallIsOut));
+    }
+
+    private void OnBecameVisible()
+    {
+        hasToBeDeactivated = false;
+    }
+
+    IEnumerator ExecuteCleaningAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        // Code to execute after the delay
+        if (hasToBeDeactivated)
+        {
+            Deactivate();
+            GameManager.Instance.CheckIfLevelHasFinished();
+        }
     }
 }
