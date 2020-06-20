@@ -131,4 +131,9 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.ShowHud(false);
         SceneManager.LoadSceneAsync("MenuScene");
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }
