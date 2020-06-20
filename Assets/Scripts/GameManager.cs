@@ -64,6 +64,14 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.ShowLevelDonePanel(false);
     }
 
+    public void NextLevel()
+    {
+        level++;
+        SceneManager.LoadSceneAsync($"Level{level}Scene");
+        UIManager.Instance.ShowLevelDonePanel(false);
+        UIManager.Instance.UpdateCurrentLevel(level);
+    }
+
     public void CheckIfLevelHasFinished()
     {
         if (MainBall.Instance.HasBallFellDown && ObjectPoolManager.Instance.AreAllSpawnedBallsInactive())
