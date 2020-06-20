@@ -107,4 +107,13 @@ public class GameManager : MonoBehaviour
             UIManager.Instance.ShowLevelDonePanel(true);
         }
     }
+
+    public void StartGame()
+    {
+        level = 1;
+        SceneManager.LoadSceneAsync($"Level{level}Scene");
+        UIManager.Instance.ShowLevelDonePanel(false);
+        ResetScore();
+        ResetCurrentLevelScore();
+    }
 }
