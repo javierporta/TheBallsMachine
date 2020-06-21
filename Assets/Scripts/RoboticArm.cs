@@ -12,12 +12,12 @@ public class RoboticArm : MonoBehaviour
 
     private void Awake()
     {
-        myAnimator = GetComponent<Animator>();
+        myAnimator = GetComponent<Animator>(); 
     }
 
     private void Update()
     {
-        float horizontalInput = CrossPlatformInputManager.GetAxisRaw("Horizontal");
+        //float horizontalInput = CrossPlatformInputManager.GetAxisRaw("Horizontal");
 
         if (CrossPlatformInputManager.GetButtonDown("Fire1") && !idOpen)
         {
