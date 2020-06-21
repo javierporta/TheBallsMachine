@@ -54,6 +54,7 @@ public class MainBall : MonoBehaviour
 
     private void ThrowBall()
     {
+        BallsAudioManager.Instance.PlayServoMotorSound();
         ballRigidbody.gravityScale = 1;
         wasBallThrown = true;
         UIManager.Instance.ShowVirtualControl(false);
