@@ -26,12 +26,15 @@ public class Obstacle : MonoBehaviour
 
     private Animator myAnimator;
 
+    private Collider2D myCollider;
+
 
     private void Awake()
     {
         lifeText.text = obstacleLife.ToString();
         initialObstacleLife = obstacleLife;
         myAnimator = GetComponent<Animator>();
+        myCollider = GetComponent<Collider2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -58,6 +61,8 @@ public class Obstacle : MonoBehaviour
             else
             {
                 BallsAudioManager.Instance.PlayExplosionSound();
+                //deactivaate collider to not hit the ball when showing explosion animation
+                myCollider.enabled = false;
 
                 //sum extra score!
                 var destroyScore = hitScore * initialObstacleLife;
