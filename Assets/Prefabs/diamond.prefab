@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7969f8150c51fd84f98b49f04feec276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleLife: 5
+  obstacleLife: 3
   lifeText: {fileID: 7090122744922261825}
   ballsToSpawn: 3
   spawnedBallSpeed: 7
