@@ -25,4 +25,10 @@ public class RoboticArm : MonoBehaviour
             idOpen = true;
         }
     }
+
+    private void StopAnimation() //called by animation event
+    {
+        //Object is gone
+        myAnimator.SetTrigger("open_arm_stop");
+    }
 }
