@@ -11,10 +11,13 @@ public class VirutalControls : MonoBehaviour
     [SerializeField]
     private GameObject throwButton;
 
+    private Image throwButtonImage;
+
     public static VirutalControls Instance { get; private set; } = null;
 
     private void Awake()
     {
+        throwButtonImage = throwButton.GetComponent<Image>();
         if (Instance == null)
         {
             Instance = this;
@@ -28,6 +31,6 @@ public class VirutalControls : MonoBehaviour
     public void ShowVirtualControl(bool hasToShowVirtualControl)
     {
         virtualControl.SetActive(hasToShowVirtualControl);
-        throwButton.GetComponent<Image>().enabled = hasToShowVirtualControl;
+        throwButtonImage.enabled = hasToShowVirtualControl;
     }
 }
