@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 6842439923134409979}
   - component: {fileID: 1176225947}
   - component: {fileID: 3212918332747413749}
+  - component: {fileID: 332655031782069113}
   m_Layer: 0
   m_Name: rectangle
   m_TagString: Untagged
@@ -236,10 +237,6 @@ MonoBehaviour:
   lifeText: {fileID: 215365823903845703}
   ballsToSpawn: 3
   spawnedBallSpeed: 7
-  ballPrefab: {fileID: 8222723622086273137, guid: ff55174a2ff538e4696fd78625017172,
-    type: 3}
-  hitAudioClip: {fileID: 8300000, guid: ae158408451625a4da1a488f1ad1b012, type: 3}
-  destroyAudioClip: {fileID: 8300000, guid: ab61e571573d6c14ea357f8d67f67f44, type: 3}
 --- !u!82 &3212918332747413749
 AudioSource:
   m_ObjectHideFlags: 0
@@ -337,6 +334,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &332655031782069113
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6842439923134409976}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dc6e418c07bdcf44b95a3e8fb1a8156d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7992508026035483347
 GameObject:
   m_ObjectHideFlags: 0
