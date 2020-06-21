@@ -190,6 +190,7 @@ GameObject:
   - component: {fileID: 840193513712371431}
   - component: {fileID: 445528849076321513}
   - component: {fileID: 1833451827023113610}
+  - component: {fileID: 4159188371958552328}
   m_Layer: 0
   m_Name: triangle
   m_TagString: Untagged
@@ -423,3 +424,22 @@ PolygonCollider2D:
       - {x: 1.38, y: -1.12}
       - {x: 1.38, y: -1.1}
       - {x: 1.3, y: -0.95}
+--- !u!95 &4159188371958552328
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4327891213067946705}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d5535b1534a990e4ab42a1468f0e1e19, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
