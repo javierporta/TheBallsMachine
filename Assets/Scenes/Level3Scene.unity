@@ -895,6 +895,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3de52375b3ef686468c519761c754c6a, type: 3}
+--- !u!114 &498810341 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3483315795133399256, guid: 3de52375b3ef686468c519761c754c6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 498810340}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 228e075b9c2bf484ba4f7373173c88be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1590,7 +1602,7 @@ PrefabInstance:
     - target: {fileID: 3595125837188611542, guid: 9ef6df3cb477cb4459573adb9e90ce84,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.21
+      value: 2.86
       objectReference: {fileID: 0}
     - target: {fileID: 3595125837188611542, guid: 9ef6df3cb477cb4459573adb9e90ce84,
         type: 3}
@@ -1620,7 +1632,7 @@ PrefabInstance:
     - target: {fileID: 3595125837188611542, guid: 9ef6df3cb477cb4459573adb9e90ce84,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3595125837188611542, guid: 9ef6df3cb477cb4459573adb9e90ce84,
         type: 3}
@@ -3007,6 +3019,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 138833025, guid: a1b5d349216880e4ba6a8d1432118b95, type: 3}
+      propertyPath: roboticArm
+      value: 
+      objectReference: {fileID: 498810341}
     - target: {fileID: 6373711125227618632, guid: a1b5d349216880e4ba6a8d1432118b95,
         type: 3}
       propertyPath: m_Name

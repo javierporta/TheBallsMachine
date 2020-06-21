@@ -819,7 +819,7 @@ PrefabInstance:
     - target: {fileID: 4327891213067946708, guid: d6c0161f3ca982247902d87951d7c55c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4327891213067946708, guid: d6c0161f3ca982247902d87951d7c55c,
         type: 3}
@@ -1250,7 +1250,7 @@ PrefabInstance:
     - target: {fileID: 2297601748953184625, guid: 3de52375b3ef686468c519761c754c6a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2297601748953184625, guid: 3de52375b3ef686468c519761c754c6a,
         type: 3}
@@ -1274,6 +1274,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3de52375b3ef686468c519761c754c6a, type: 3}
+--- !u!114 &1003539459 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3483315795133399256, guid: 3de52375b3ef686468c519761c754c6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1003539458}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 228e075b9c2bf484ba4f7373173c88be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1045791435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,7 +1592,7 @@ PrefabInstance:
     - target: {fileID: 3595125837188611542, guid: 9ef6df3cb477cb4459573adb9e90ce84,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.21
+      value: 2.81
       objectReference: {fileID: 0}
     - target: {fileID: 3595125837188611542, guid: 9ef6df3cb477cb4459573adb9e90ce84,
         type: 3}
@@ -1610,7 +1622,7 @@ PrefabInstance:
     - target: {fileID: 3595125837188611542, guid: 9ef6df3cb477cb4459573adb9e90ce84,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3595125837188611542, guid: 9ef6df3cb477cb4459573adb9e90ce84,
         type: 3}
@@ -1689,7 +1701,7 @@ PrefabInstance:
     - target: {fileID: 4327891213067946708, guid: 3df17af2e243fce4281f26161048bfbe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4327891213067946708, guid: 3df17af2e243fce4281f26161048bfbe,
         type: 3}
@@ -2766,7 +2778,7 @@ PrefabInstance:
     - target: {fileID: 3595125837188611542, guid: 9ef6df3cb477cb4459573adb9e90ce84,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3595125837188611542, guid: 9ef6df3cb477cb4459573adb9e90ce84,
         type: 3}
@@ -2835,7 +2847,7 @@ PrefabInstance:
     - target: {fileID: 4327891213067946708, guid: 3df17af2e243fce4281f26161048bfbe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4327891213067946708, guid: 3df17af2e243fce4281f26161048bfbe,
         type: 3}
@@ -2861,6 +2873,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 138833025, guid: a1b5d349216880e4ba6a8d1432118b95, type: 3}
+      propertyPath: roboticArm
+      value: 
+      objectReference: {fileID: 1003539459}
     - target: {fileID: 6373711125227618632, guid: a1b5d349216880e4ba6a8d1432118b95,
         type: 3}
       propertyPath: m_Name
@@ -2904,7 +2920,7 @@ PrefabInstance:
     - target: {fileID: 6373711125227618633, guid: a1b5d349216880e4ba6a8d1432118b95,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6373711125227618633, guid: a1b5d349216880e4ba6a8d1432118b95,
         type: 3}
@@ -3041,7 +3057,7 @@ PrefabInstance:
     - target: {fileID: 9016086366111589069, guid: dcd947b6ba42ef9448274fc2597d1118,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9016086366111589069, guid: dcd947b6ba42ef9448274fc2597d1118,
         type: 3}

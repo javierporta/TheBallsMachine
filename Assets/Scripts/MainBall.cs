@@ -15,6 +15,9 @@ public class MainBall : MonoBehaviour
 
     public bool HasBallFellDown = false;
 
+    [SerializeField]
+    private RoboticArm roboticArm;
+
     private void Awake()
     {
         ballRigidbody = GetComponent<Rigidbody2D>();
@@ -41,6 +44,7 @@ public class MainBall : MonoBehaviour
             }
 
 
+            roboticArm.HorizontalMov(horizontalInput);
             ballRigidbody.velocity =
                   new Vector2(horizontalInput * speed,
                   ballRigidbody.velocity.y

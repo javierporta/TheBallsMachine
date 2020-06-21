@@ -134,3 +134,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3.5
+  HasBallFellDown: 0
+  roboticArm: {fileID: 3483315795133399256, guid: 3de52375b3ef686468c519761c754c6a,
+    type: 3}
