@@ -77,6 +77,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
         UIManager.Instance.ShowLevelDonePanel(false);
+        UIManager.Instance.ShowGameCompletedPanel(false);
         CancelLastGameScore();
         ResetCurrentLevelScore();
     }
