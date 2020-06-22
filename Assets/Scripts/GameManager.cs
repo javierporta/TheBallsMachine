@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     private int level = 1;
 
+    private const int GAME_TOTAL_LEVELS = 3;
+
     private void Awake()
     {
         if (Instance == null)
@@ -99,9 +101,7 @@ public class GameManager : MonoBehaviour
     {
         if (MainBall.Instance.HasBallFellDown && ObjectPoolManager.Instance.AreAllSpawnedBallsInactive())
         {
-            print("Level finished");
-
-            if (level == 3)
+            if (level == GAME_TOTAL_LEVELS)
             {
                 UIManager.Instance.ShowGameCompletedPanel(true);
                 UIManager.Instance.UpdateFinalScore(score);
