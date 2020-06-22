@@ -14,6 +14,9 @@ public class BallsAudioManager : MonoBehaviour
     [SerializeField]
     private AudioClip destroyAudioClip;
 
+    [SerializeField]
+    private AudioClip servoMotorAudioClip;
+
     private void Awake()
     {
         myAudioSource = GetComponent<AudioSource>();
@@ -38,4 +41,10 @@ public class BallsAudioManager : MonoBehaviour
     {
         myAudioSource.PlayOneShot(hitAudioClip);
     }
+
+    public void PlayServoMotorSound()
+    {
+        myAudioSource.PlayOneShot(servoMotorAudioClip);
+    }
 }
+
