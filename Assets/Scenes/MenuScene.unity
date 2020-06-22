@@ -936,7 +936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitAudioClip: {fileID: 8300000, guid: ae158408451625a4da1a488f1ad1b012, type: 3}
   destroyAudioClip: {fileID: 8300000, guid: ab61e571573d6c14ea357f8d67f67f44, type: 3}
-  servoMotorAudioClip: {fileID: 0}
+  servoMotorAudioClip: {fileID: 8300000, guid: b5c0c446dbf83694d9105f79376c8769, type: 3}
 --- !u!82 &474331777
 AudioSource:
   m_ObjectHideFlags: 0
